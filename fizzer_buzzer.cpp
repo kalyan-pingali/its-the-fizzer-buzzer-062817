@@ -61,7 +61,7 @@ long long fib( int input ){
 
 int main(void){
 	int user_input;
-    long long out;
+  long long out;
 	if((scanf("%d", &user_input))==1){
         cout<<user_input<<endl;
         out = fib(user_input);
