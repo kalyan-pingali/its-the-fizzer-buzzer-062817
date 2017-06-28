@@ -2,7 +2,7 @@
 V Kalyan Pingali
 
 **Revision**
-v2.0
+v2.1
 
 **Contact**
 vepi3012@colorado.edu
@@ -30,3 +30,5 @@ v1.1 : Support extended for inputs upto 93 using long long int, and adding stepp
 v1.2 : Support upto 200 added by using modular arithmetic by 1.5E+18
 
 v2.0 : Buzz, Fizz or FizzBuzz if divisible by 3, 5 or 15. Else number printed
+
+v2.1 : #defines added instead of raw numbers
