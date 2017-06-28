@@ -1,5 +1,5 @@
 //Author   : V Kalyan Pingali
-//Revision : v2.0
+//Revision : v2.1
 //Contact  : vepi3012@colorado.edu
 //Date     : 06/28/2017
 
@@ -14,10 +14,22 @@
 //                - v1.1 : Support extended for inputs upto 93 using long long int, and adding stepping stones to aviod time-out
 //                - v1.2 : Support upto 200 added by using modular arithmetic by 1.5E+18
 //                - v2.0 : Buzz, Fizz or FizzBuzz if divisible by 3, 5 or 15. Else number printed
+//                - v2.1 : #defines added instead of raw numbers
 
 #include <iostream>
 
-#define modulo_wrapper 1500000000000000000
+#define modulo_wrapper 1500000000000000000	// 1.5E+18 is considered as it is just greater than the limit of long long int,
+						// and there is no Fibonacci number between the upper limit and this
+						// Also 1.5E+18 is divisible by 15, and hence 3 and 5 too
+#define Fib_40 63245986				// 40th Fibonacci number
+#define Fib_41 102334155			// 41st Fibonacci number
+#define Fib_81 23416728348467685		// 81st Fibonacci number
+#define Fib_82 37889062373143906		// 82nd Fibonacci number
+#define Fib_121 754990966640871840		// 121st Fibonacci number modulo 1.5E+18
+#define Fib_122 1398507948658051921		// 122nd Fibonacci number modulo 1.5E+18
+#define Fib_161 293000174702095995		// 161st Fibonacci number modulo 1.5E+18
+#define Fib_162 432247806074196061		// 162nd Fibonacci number modulo 1.5E+18
+
 using namespace std;
 
 long long fib( int input ){
@@ -28,28 +40,28 @@ long long fib( int input ){
 		return 1;
 	}
     else if(input==40){
-        return 63245986;
+        return Fib_40;
     }
     else if(input==41){
-        return 102334155;
+        return Fib_41;
     }
     else if(input==81){
-        return 23416728348467685;
+        return Fib_81;
     }
     else if(input==82){
-        return 37889062373143906;
+        return Fib_82;
     }
     else if(input==121){
-        return 754990966640871840;
+        return Fib_121;
     }
     else if(input==122){
-        return 1398507948658051921;
+        return Fib_122;
     }
     else if(input==161){
-        return 293000174702095995;
+        return Fib_161;
     }
     else if(input==162){
-        return 432247806074196061;
+        return Fib_162;
     }
     else if(input>200){
         return -1;
@@ -60,9 +72,9 @@ long long fib( int input ){
 }
 
 int main(void){
-	int user_input;
-  long long out;
-	if((scanf("%d", &user_input))==1){
+    int user_input;
+    long long out;
+    if((scanf("%d", &user_input))==1){
         cout<<user_input<<endl;
         out = fib(user_input);
         int mod_3 = out%3;
@@ -88,5 +100,5 @@ int main(void){
     else{
         cout<<"Input not supported!";
     }
-	return 0;
+    return 0;
 }
