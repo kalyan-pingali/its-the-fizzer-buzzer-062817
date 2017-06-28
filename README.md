@@ -1,9 +1,6 @@
-Author   : V Kalyan Pingali 
-
+Author   : V Kalyan Pingali
 Revision : v1.2
-
 Contact  : vepi3012@colorado.edu
-
 Date     : 06/28/2017
 
 *****************************************DESCRIPTION*****************************************
