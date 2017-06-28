@@ -13,7 +13,9 @@
 //Version history - v1.0 : Basic fibonacci program, prints out numbers. Time-outs for inputs over 45
 //                - v1.1 : Support extended for inputs upto 93 using long long int, and adding stepping stones to aviod time-out
 //                - v1.2 : Support upto 200 added by using modular arithmetic by 1.5E+18
+//		  - v2.0 : Prints out Buzz, Fizz or FizzBuzz if divisible by 3,5,15 respectively, and number otherwise
 #include <iostream>
+//#include <string>
 
 #define modulo_wrapper 1500000000000000000
 using namespace std;
@@ -59,9 +61,32 @@ long long fib( int input ){
 
 int main(void){
 	int user_input;
-  long long out;
-	cin<<user_input;
-  out = fib(user_input);
-  cout<<out;
+    long long out;
+	if((scanf("%d", &user_input))==1){
+        cout<<user_input<<endl;
+        out = fib(user_input);
+        int mod_3 = out%3;
+        int mod_5 = out%5;
+        if(out==-1){
+            cout<<"Input entered is beyond 200, Not Supported";
+        }
+        else if(mod_3==0){
+            if(mod_5==0){
+                cout<<"FizzBuzz";
+            }
+            else{
+                cout<<"Buzz";
+            }
+        }
+        else if(mod_5==0){
+            cout<<"Fizz";
+        }
+        else{
+            cout<<out;
+        }
+    }
+    else{
+        cout<<"Input not supported!";
+    }
 	return 0;
 }
