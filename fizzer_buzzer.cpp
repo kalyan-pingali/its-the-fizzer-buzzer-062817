@@ -15,6 +15,7 @@
 //                - v1.2 : Support upto 200 added by using modular arithmetic by 1.5E+18
 //                - v2.0 : Buzz, Fizz or FizzBuzz if divisible by 3, 5 or 15. Else number printed
 //                - v2.1 : #defines added instead of raw numbers
+//                - v2.2 : Negative inputs avoided
 
 #include <iostream>
 
@@ -63,7 +64,7 @@ long long fib( int input ){
     else if(input==162){
         return Fib_162;
     }
-    else if(input>200){
+    else if(input>200 || input<1){
         return -1;
     }
 	else{
@@ -80,7 +81,7 @@ int main(void){
         int mod_3 = out%3;
         int mod_5 = out%5;
         if(out==-1){
-            cout<<"Input entered is beyond 200, Not Supported";
+            cout<<"Input entered is not within bounds [1,200]";
         }
         else if(mod_3==0){
             if(mod_5==0){
