@@ -23,8 +23,8 @@ Beyond 93rd fibonacci number, all results are expressed modulo 1.5E+18
 
 ****VERSION HISTORY****
 
-v1.0 : Basic fibonacci program, prints out numbers. Time-outs for inputs over 45*
+v1.0 : Basic fibonacci program, prints out numbers. Time-outs for inputs over 45
 
-v1.1 : Support extended for inputs upto 93 using long long int, and adding stepping stones to aviod time-out*
+v1.1 : Support extended for inputs upto 93 using long long int, and adding stepping stones to aviod time-out
 
-v1.2 : Support upto 200 added by using modular arithmetic by 1.5E+18*
+v1.2 : Support upto 200 added by using modular arithmetic by 1.5E+18
