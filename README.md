@@ -35,4 +35,4 @@ v2.1 : #defines added instead of raw numbers
 
 v2.2 : Negative inputs avoided
 
-v2.3 : Non integral inputs avoided (See issues)
+v2.3 : Non integral inputs avoided (See issues), comments added, user input prompt added
