@@ -16,7 +16,7 @@
 	//                - v2.0 : Buzz, Fizz or FizzBuzz if divisible by 3, 5 or 15. Else number printed
 	//                - v2.1 : #defines added instead of raw numbers
 	//                - v2.2 : Negative inputs avoided
-	//		  - v2.3 : Non integral inputs avoided (See issues) and comments added
+	//		  - v2.3 : Non integral inputs avoided (See issues), comments added, user input prompt added
 
 	#include <iostream>
 	#include <string>
