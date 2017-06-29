@@ -21,6 +21,9 @@ Explanation : 0 (1st Fibonacci number) is divisible by 15 => FizzBuzz; 5 (6th Fi
 **NOTE**
 Beyond 93rd fibonacci number, all results are expressed modulo 1.5E+18
 
+**NOTE**
+Input numbers beyond 2147483648 will be treated as unsupported inputs (Out of Int bounds)
+
 ****VERSION HISTORY****
 
 v1.0 : Basic fibonacci program, prints out numbers. Time-outs for inputs over 45
