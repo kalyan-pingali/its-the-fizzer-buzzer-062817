@@ -6,3 +6,24 @@ Basic Test Cases:
 9 : Buzz
 0 : FizzBuzz
 20XYZ : Input not supported!
+
+Additional Test Cases : 
+1 : 0
+3 : 1
+50 : 7778742049
+200 : 200th Fibonacci number modulo 1.5E+18 : 2037284371942044301
+
+-1 : Input entered is not within bounds [1,200]
+201 : Input entered is not within bounds [1,200]
+0 : Input entered is not within bounds [1,200]
+-50000 : Input entered is not within bounds [1,200]
+2147483647 : Input entered is not within bounds [1,200]
+
+1X5 : Input not supported!
+XYZ : Input not supported!
+xyz : Input not supported!
+-500X : Input not supported!
+X-500 : Input not supported!
+1-500 : Input not supported!
+300-150 : Input not supported!
+2147483648 : Is out of bounds for int [-2147483648,2147483647] and hence will be shown as "Input not supported!"
