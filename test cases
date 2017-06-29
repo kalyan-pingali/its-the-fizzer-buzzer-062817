@@ -1,0 +1,8 @@
+Basic Test Cases:
+2 : 1
+10 : 34
+20 : 4181
+16 : Fizz
+9 : Buzz
+0 : FizzBuzz
+20XYZ : Input not supported!
