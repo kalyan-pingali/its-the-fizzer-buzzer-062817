@@ -91,14 +91,14 @@
 		if(out==-1){						// To check if integer is within bounds
 		    cout<<"Input entered is not within bounds [1,200]";
 		}
-		else if(mod_3 && mod_5){					// If output is divisible by 3
+		else if(mod_3 && mod_5){				// If output is divisible by 15
             cout<<"FizzBuzz";
 		}
-		else if(mod_3 && !(mod_5)){						// only divisible by 3
+		else if(mod_3 && !(mod_5)){				// only divisible by 3
 			cout<<"Buzz";
 	    }
 		
-		else if(!(mod_3) && mod_5){					// if divisible by 5 and not by 3
+		else if(!(mod_3) && mod_5){				// only divisible by 5
 		    cout<<"Fizz";
 		}
 		else{							// not divisible by 3 and/or 5
