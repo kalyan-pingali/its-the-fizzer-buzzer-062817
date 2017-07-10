@@ -69,9 +69,9 @@
 	    else if(input>200 || input<1){				// if input is not within bounds defined
 		return -1;
 	    }
-		else{
+	    else{
 		return fib(input-2)%modulo_wrapper + fib(input-1)%modulo_wrapper;
-		}
+	    }
 	}
 
 	int main(void){
@@ -86,20 +86,19 @@
 	    if(!test.compare(user_str)){				// Comparing user input and modified input (test) are same, to check for non integral inputs
 		//cout<<user_input<<endl;
 		out = fib(user_input);					// Calling fib function with argument user_input
-		int mod_3 = out%3;					// returned output of function fib modulo 3
-		int mod_5 = out%5;					// returned output of function fib modulo 5
+		bool mod_3 = (out%3==0)?true:false;					// returned output of function fib modulo 3
+		bool mod_5 = (out%5==0)?true:false;					// returned output of function fib modulo 5
 		if(out==-1){						// To check if integer is within bounds
 		    cout<<"Input entered is not within bounds [1,200]";
 		}
-		else if(mod_3==0){					// If output is divisible by 3
-		    if(mod_5==0){					// and if output is divisible by 5 => divisible by 15
-			cout<<"FizzBuzz";
-		    }
-		    else{						// only divisible by 3
-			cout<<"Buzz";
-		    }
+		else if(mod_3 && mod_5){					// If output is divisible by 3
+            cout<<"FizzBuzz";
 		}
-		else if(mod_5==0){					// if divisible by 5 and not by 3
+		else if(mod_3 && !(mod_5)){						// only divisible by 3
+			cout<<"Buzz";
+	    }
+		
+		else if(!(mod_3) && mod_5){					// if divisible by 5 and not by 3
 		    cout<<"Fizz";
 		}
 		else{							// not divisible by 3 and/or 5
