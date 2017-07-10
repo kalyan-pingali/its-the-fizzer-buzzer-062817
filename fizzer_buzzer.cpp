@@ -86,8 +86,8 @@
 	    if(!test.compare(user_str)){				// Comparing user input and modified input (test) are same, to check for non integral inputs
 		//cout<<user_input<<endl;
 		out = fib(user_input);					// Calling fib function with argument user_input
-		bool mod_3 = (out%3==0)?true:false;					// returned output of function fib modulo 3
-		bool mod_5 = (out%5==0)?true:false;					// returned output of function fib modulo 5
+		bool mod_3 = (out%3==0)?true:false;			// returned output of function fib modulo 3
+		bool mod_5 = (out%5==0)?true:false;			// returned output of function fib modulo 5
 		if(out==-1){						// To check if integer is within bounds
 		    cout<<"Input entered is not within bounds [1,200]";
 		}
