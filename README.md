@@ -5,7 +5,7 @@ V Kalyan Pingali
 v2.3
 
 **Contact**
-vepi3012@colorado.edu
+pnglkalyan@gmail.com
 
 **Date**
 06/28/2017
