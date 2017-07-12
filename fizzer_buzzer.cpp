@@ -75,7 +75,7 @@ long long fib( int input ){				// Using recursion to calculate fibonacci number
 }
 
 int modify_string(string input_string){
-	const char *char_input = input_string.c_str();	// Convert string entered by user to character pointer for use in atoi()
+    const char *char_input = input_string.c_str();	// Convert string entered by user to character pointer for use in atoi()
     int user_input = atoi(char_input);			// Converting to integer
     string test = to_string(user_input);		// Converting integer back to string format; test is integer part of input as a string
     if(!test.compare(input_string)){			// Comparing user input and modified input (test) are same, to check for non integral inputs
