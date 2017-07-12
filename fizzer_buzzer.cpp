@@ -21,21 +21,21 @@
 #include <iostream>
 #include <string>
 
-#define modulo_wrapper 1500000000000000000			// 1.5E+18 is considered as it is just greater than the limit of long long int,
-													// and there is no Fibonacci number between the upper limit and this
-													// Also 1.5E+18 is divisible by 15, and hence 3 and 5 too
-#define Fib_40 63245986								// 40th Fibonacci number
-#define Fib_41 102334155							// 41st Fibonacci number
-#define Fib_81 23416728348467685					// 81st Fibonacci number
-#define Fib_82 37889062373143906					// 82nd Fibonacci number
-#define Fib_121 754990966640871840					// 121st Fibonacci number modulo 1.5E+18
-#define Fib_122 1398507948658051921					// 122nd Fibonacci number modulo 1.5E+18
-#define Fib_161 293000174702095995					// 161st Fibonacci number modulo 1.5E+18
-#define Fib_162 432247806074196061					// 162nd Fibonacci number modulo 1.5E+18
+#define modulo_wrapper 1500000000000000000		// 1.5E+18 is considered as it is just greater than the limit of long long int,
+							// and there is no Fibonacci number between the upper limit and this
+							// Also 1.5E+18 is divisible by 15, and hence 3 and 5 too
+#define Fib_40 63245986					// 40th Fibonacci number
+#define Fib_41 102334155				// 41st Fibonacci number
+#define Fib_81 23416728348467685			// 81st Fibonacci number
+#define Fib_82 37889062373143906			// 82nd Fibonacci number
+#define Fib_121 754990966640871840			// 121st Fibonacci number modulo 1.5E+18
+#define Fib_122 1398507948658051921			// 122nd Fibonacci number modulo 1.5E+18
+#define Fib_161 293000174702095995			// 161st Fibonacci number modulo 1.5E+18
+#define Fib_162 432247806074196061			// 162nd Fibonacci number modulo 1.5E+18
 
 using namespace std;
 
-long long fib( int input ){							// Using recursion to calculate fibonacci number
+long long fib( int input ){				// Using recursion to calculate fibonacci number
     if(input==1){
 		return 0;
     }
@@ -66,7 +66,7 @@ long long fib( int input ){							// Using recursion to calculate fibonacci numb
     else if(input==162){
 		return Fib_162;
     }
-    else if(input>200 || input<1){					// if input is not within bounds defined
+    else if(input>200 || input<1){			// if input is not within bounds defined
 		return -1;
     }
     else{
@@ -76,9 +76,9 @@ long long fib( int input ){							// Using recursion to calculate fibonacci numb
 
 int modify_string(string input_string){
 	const char *char_input = input_string.c_str();	// Convert string entered by user to character pointer for use in atoi()
-    int user_input = atoi(char_input);				// Converting to integer
-    string test = to_string(user_input);			// Converting integer back to string format; test is integer part of input as a string
-    if(!test.compare(input_string)){				// Comparing user input and modified input (test) are same, to check for non integral inputs
+    int user_input = atoi(char_input);			// Converting to integer
+    string test = to_string(user_input);		// Converting integer back to string format; test is integer part of input as a string
+    if(!test.compare(input_string)){			// Comparing user input and modified input (test) are same, to check for non integral inputs
         return user_input;
     }
     else{
@@ -87,31 +87,31 @@ int modify_string(string input_string){
 }
 
 int main(void){
-    string user_str;							// To store raw user input
-    long long out;							    // To store output
+    string user_str;					// To store raw user input
+    long long out;					// To store output
     cout<<"Please enter an integer between (including) 1 and 200 : ";
-    cin>>user_str;								// Read input from user
+    cin>>user_str;					// Read input from user
 	int user_input = modify_string(user_str);
     if(user_input==-1){
         cout<<"Input not supported!";			// If input is not an integer
     }
     else{
-		out = fib(user_input);						// Calling fib function with argument user_input
-		bool mod_3 = (out%3==0)?true:false;			// returned output of function fib modulo 3
-		bool mod_5 = (out%5==0)?true:false;			// returned output of function fib modulo 5
-    	if(out==-1){							// To check if integer is within bounds
+		out = fib(user_input);			// Calling fib function with argument user_input
+		bool mod_3 = (out%3==0)?true:false;	// returned output of function fib modulo 3
+		bool mod_5 = (out%5==0)?true:false;	// returned output of function fib modulo 5
+    	if(out==-1){					// To check if integer is within bounds
 		    cout<<"Input entered is not within bounds [1,200]";
     	}
-		else if(mod_3 && mod_5){					// If output is divisible by 15
+		else if(mod_3 && mod_5){		// If output is divisible by 15
     	    cout<<"FizzBuzz";
 		}
-		else if(mod_3 && !(mod_5)){				    // only divisible by 3
+		else if(mod_3 && !(mod_5)){		// only divisible by 3
 			cout<<"Buzz";
     	}
-		else if(!(mod_3) && mod_5){				    // only divisible by 5
+		else if(!(mod_3) && mod_5){		// only divisible by 5
 		    cout<<"Fizz";
 		}
-		else{									    // not divisible by 3 and/or 5
+		else{					// not divisible by 3 and/or 5
 		    cout<<out;
 		}
     }
